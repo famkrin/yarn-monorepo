@@ -1,0 +1,21 @@
+{
+  "name": "yarn-monorepo",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/famkrin/yarn-monorepo",
+  "author": "famkrin <127283611+famkrin@users.noreply.github.com>",
+  "license": "MIT",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "start": "yarn --cwd apps/frontend start",
+    "next": "yarn --cwd apps/nextapp dev",
+    "dev": "npm-run-all --parallel start next"
+  },
+  "devDependencies": {
+    "npm-run-all": "^4.1.5"
+  }
+}
